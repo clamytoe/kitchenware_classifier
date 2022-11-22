@@ -3,8 +3,9 @@ setup.py
 
 Setup for installing the package.
 """
-from setuptools import setup, find_packages
 from pathlib import Path
+
+from setuptools import find_packages, setup
 
 import kitchenware_classifier
 
@@ -45,12 +46,10 @@ setup(
     install_requires=["pytest"],
     license="MIT",
     entry_points={
-        "console_scripts": [
-            "kitchenware_classifier=kitchenware_classifier.app:main"
-        ],
+        "console_scripts": ["kc=kitchenware_classifier.app:main"],
     },
     project_urls={
-        'Bug Reports': 'https://github.com/clamytoe/kitchenware_classifier/issues',
-        'Source': 'https://github.com/clamytoe/kitchenware_classifier/',
+        "Bug Reports": "https://github.com/clamytoe/kitchenware_classifier/issues",
+        "Source": "https://github.com/clamytoe/kitchenware_classifier/",
     },
 )

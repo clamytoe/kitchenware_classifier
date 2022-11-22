@@ -48,7 +48,7 @@ pip install -e .
 ## Usage
 
 ```zsh
-kitchenware_classifier
+kc
 ```
 
 The output should be: `Successfully installed your project file: kitchenware_classifier`
