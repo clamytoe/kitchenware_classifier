@@ -1,0 +1,12 @@
+name: kitchenware_classifier
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - black
+  - flake8
+  - isort
+  - mypy
+  - pytest
+  - pytest-cov
+  - python=3.9.13

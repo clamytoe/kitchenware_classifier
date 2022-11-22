@@ -1,0 +1,13 @@
+[flake8]
+# E226: missing whitespace around arithmetic operator
+# E402: module level import not at top of file
+ignore = E226,E402
+max-line-length = 88
+exclude =
+    .git,
+    .idea,
+    .pytest_cache,
+    .vscode,
+    *.egg-info,
+    __pycache__,
+max-complexity = 10
