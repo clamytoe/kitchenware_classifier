@@ -192,7 +192,8 @@ As you can see, it picked up on the cup!
 
 ## Docker image
 
-If you would rather run this as a docker container you can simply download an already compiled version from Docker Hub: Kitchenware Classifier
+If you would rather not have to download this repo, create an environmet, download the dataset, etc, you can run this as a docker container.
+Simply download an already compiled version from [Docker Hub](https://hub.docker.com): [Kitchenware Classifier](https://hub.docker.com/r/clamytoe/kitchenware-clf)
 
 ```zsh
 (kwc) ➜ docker pull clamytoe/kitchenware-clf
