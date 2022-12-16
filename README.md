@@ -209,7 +209,8 @@ Once you have the image you can run it as so:
 
 ### Build your own
 
-If you would rather build the docker image yourself, I have included the Dockerfile just for that purpose. Just run the following command from the directory where you cloned this repo to:
+If you would rather build the docker image yourself, I have included the `Dockerfile` just for that purpose.
+Just run the following command from the directory where you cloned this repo to:
 
 ```zsh
 (kwc) ➜ docker build -t kitchenware-clf .
