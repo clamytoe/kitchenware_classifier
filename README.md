@@ -75,6 +75,8 @@ My tree structure looks like this:
 └── train.py
 ```
 
+> **NOTE:** I've included the model, `fastai_model.pkl`, but due to it's size, GitHub complained about it. If I have to remove it, you will have to build your own, or use the provided Docker [image](https://hub.docker.com/r/clamytoe/kitchenware-clf), which has it.
+
 ## Initial setup
 
 First thing to do is to create or change directories into wherever you keep all of your projects.
