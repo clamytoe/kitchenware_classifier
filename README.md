@@ -150,7 +150,8 @@ Now you can modify the scripts and use them for your own purpose.
 
 ## A much easier way
 
-The benefit of using FasAPI is that it makes things much easier and faster. For instance, if you nagivate to: [http://localhost:8000/docs](http://localhost:8000/docs) you will be able to interact with the application.
+The benefit of using [FasAPI](https://fastapi.tiangolo.com/) is that it makes things much easier and faster.
+For instance, if you nagivate to: [http://localhost:8000/docs](http://localhost:8000/docs) you will be able to interact with the application.
 
 ![docs](images/docs.png)
 
@@ -160,7 +161,8 @@ This entrypoint just returns some information about me and the project.
 
 ### POST /classify_image Classify Image
 
-This is where you get to test out the model and see how well it works. Feed it an image of kitchenware item and see how well it does.
+This is where you get to play with the model and see how well it works.
+Feed it an image of kitchenware item and see how well it does.
 
 To use it, simply click on the **POST** button to expand it:
 
