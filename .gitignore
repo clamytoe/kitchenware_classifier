@@ -108,3 +108,9 @@ ENV/
 
 # vscode
 .vscode/
+
+# project data
+data/images/
+
+# project archive
+*.zip
