@@ -110,7 +110,13 @@ ENV/
 .vscode/
 
 # project data
-data/images/
+kitchenware_classifier/data/
 
 # project archive
 *.zip
+
+# project notebooks
+notebooks/
+
+# project predictions
+predictions/fastai-convnext*.csv
