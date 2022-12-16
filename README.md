@@ -31,7 +31,7 @@ My fellow team mebers were:
 
 ## The data
 
-The dataset is pretty big so I did not include it here. You can download it fromt the competition page.
+The dataset is pretty big so I did not include it here. You can download it from the competition page.
 
 In order to get things to work right the first time, extract it's contents into the `kitchenware_classifier/data/` folder.
 
