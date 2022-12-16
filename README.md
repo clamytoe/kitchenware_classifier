@@ -224,6 +224,18 @@ Once you have the image you can run it as so:
 (kwc) ➜ docker run -it --rm -p 8000:8000 kitchenware-clf
 ```
 
+## Cloud deployment
+
+I've been really impressed with the ease of use of [Mogenius.io](https://mogenius.com/) so I went ahead and deployed the model there.
+
+[Kitchenware Classifier on Mogenius.io](http://tcp-mo4.mogenius.io:53008/docs)
+
+Here is what the dashboard looks like after classifying an image.
+
+![mogenius](images/mogenius.png)
+
+> The free tier is a bit slow, but for free and extreme ease of use, it's perfect!
+
 ## Contributing
 
 Contributions are welcomed.
