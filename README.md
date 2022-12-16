@@ -249,7 +249,7 @@ If you encounter any problems, please [file an issue](https://github.com/clamyto
 
 * **v0.1.0** Initial commit.
 
-[python-version]:https://img.shields.io/badge/python-3.9.13-brightgreen.svg
+[python-version]:https://img.shields.io/badge/python-3.10.6-brightgreen.svg
 [latest-version]:https://img.shields.io/badge/version-0.1.0-blue.svg
 [issues-image]:https://img.shields.io/github/issues/clamytoe/kitchenware_classifier.svg
 [issues-url]:https://github.com/clamytoe/kitchenware_classifier/issues
