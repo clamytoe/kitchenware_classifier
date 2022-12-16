@@ -77,6 +77,10 @@ My tree structure looks like this:
 
 ## Initial setup
 
+First thing to do is to create or change directories into wherever you keep all of your projects.
+For me, it's the `Projects` folder.
+Once there clone this repo.
+
 ```zsh
 (py310) ➜ cd Projects
 (py310) ➜ git clone <https://github.com/clamytoe/kitchenware_classifier.git>
@@ -89,12 +93,13 @@ If you are an Anaconda user, this command will get you up to speed with the base
 
 ```zsh
 (py310) ➜ conda env create
-(kwc) ➜ conda activate kwc
+(py310) ➜ conda activate kwc
 ```
 
 ## Regular Python setup
 
-If you are just using normal Python, this will get you ready, but I highly recommend that you do this in a virtual environment. There are many ways to do this, the simplest using venv.
+If you are just using normal Python, this will get you ready.
+First thing is to create a virtual environment. There are many ways to do this, but the simplest is using `venv`.
 
 ```zsh
 (py310) ➜ python3 -m venv venv
@@ -104,13 +109,15 @@ If you are just using normal Python, this will get you ready, but I highly recom
 
 ## Start the server
 
+Once your environment is setup, this one command will start the server:
+
 ```zsh
 (kwc) ➜ uvicorn api:app --reload
 ```
 
 ## Usage
 
-With the server up and running, you can now send it images to classify for you. I have included two images:
+With the server up and running, you can now send it images to classify for you. I have included two sample images:
 
 <img src="sample.jpg" alt="sample 1" width="200" />
 
