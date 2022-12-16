@@ -1,3 +1,6 @@
+# WARNING: Not optimized for this project. I use this env for other projects
+#          so contains packages not needed for this project. Will attempt to
+#          clean it up when I get some time.
 name: kwc
 channels:
   - anaconda-platform
