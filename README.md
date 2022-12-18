@@ -228,13 +228,36 @@ Once you have the image you can run it as so:
 
 I've been really impressed with the ease of use of [Mogenius.io](https://mogenius.com/) so I went ahead and deployed the model there.
 
-[Kitchenware Classifier on Mogenius.io](http://tcp-mo4.mogenius.io:53008/docs)
+[Kitchenware Classifier on Mogenius.io](kitchenware-cl-prod-kitchenware-classifier-7f8cze.mo1.mogenius.io:80/docs)
 
 Here is what the dashboard looks like after classifying an image.
 
 ![mogenius](images/mogenius.png)
 
 > The free tier is a bit slow, but for free and extreme ease of use, it's perfect!
+
+### Prepare model for cloud deployment
+
+Before I could even think about getting my model on the cloud, I first have to tag my image and push it to docker hub.
+
+```zsh
+(kwc) ➜ docker tag kitchenware-clf clamytor/kitchenware-clf:latest
+```
+
+> **NOTE:** Make sure to use your own docker hub user name.
+
+Once your image has been properly named, you can now push it.
+
+```zsh
+(kwc) ➜ docker push clamytoe/kitchenware-clf:latest
+```
+
+Mogenius allows you to deploy from an existing image but it can also just build it from yoru GitHub repo, as long as you have a `Dockerfile`.
+Detailing the steps here is beyond the scope of this project, but it's really simple. Simply head over to Mogenius and check out their [Quickstart Guide](https://docs.mogenius.com/getting-started/quickstart).
+
+*Deplyment from docker hub image in progress...*
+
+![deployment](images/deployment.png)
 
 ## Contributing
 
