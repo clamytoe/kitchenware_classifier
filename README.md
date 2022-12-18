@@ -75,8 +75,6 @@ My tree structure looks like this:
 └── train.py
 ```
 
-> **NOTE:** I've included the model, `fastai_model.pkl`, but due to it's size, GitHub complained about it. If I have to remove it, you will have to build your own, or use the provided Docker [image](https://hub.docker.com/r/clamytoe/kitchenware-clf), which has it.
-
 ## Initial setup
 
 First thing to do is to create or change directories into wherever you keep all of your projects.
@@ -107,6 +105,17 @@ First thing is to create a virtual environment. There are many ways to do this, 
 (py310) ➜ python3 -m venv venv
 (py310) ➜ source venv/bin/activate
 (venv) ➜ pip install -r requirements.txt
+```
+
+## Generating the model
+
+> **NOTE:** I've included the model, `fastai_model.pkl`, but due to it's size, GitHub complained about it. If I have to remove it, you will have to build your own, or use the provided Docker [image](https://hub.docker.com/r/clamytoe/kitchenware-clf), which has it.
+
+Once you have your local virtual environment setup,
+you just need to run the `train.py` script and some coffee to generate it.
+
+```zsh
+(kwc) ➜ python train.py
 ```
 
 ## Start the server
