@@ -76,9 +76,6 @@ print("Finding best learning rate...")
 lrs = learn.lr_find(suggest_funcs=(minimum, steep, valley, slide))
 print(f"{lrs=}")
 
-# print("Performing initial training...")
-# learn.fit_one_cycle(3, lrs.valley)
-
 save_best = SaveModelCallback(
     monitor="valid_loss",
     min_delta=0.000001,
@@ -95,13 +92,6 @@ learn.fit(10, lrs.valley, cbs=[save_best, early_stop])
 learn.path = keep_path  # type: ignore
 
 print("Model validation:", learn.validate())
-
-# print("Unfreezing the last two layers...")
-# learn.unfreeze()
-
-# # Fine tune the model
-# print("Fine tuning the model...")
-# learn.fine_tune(12, lrs.valley)
 
 # Save the model
 print("Saving model as: fastai_model.pkl...")
