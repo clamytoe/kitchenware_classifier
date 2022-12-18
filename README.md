@@ -116,6 +116,21 @@ you just need to run the `train.py` script and some coffee to generate it.
 
 ```zsh
 (kwc) ➜ python train.py
+Finding best learning rate...
+lrs=SuggestedLRs(minimum=0.004786301031708717, steep=1.4454397387453355e-05, valley=0.0005754399462603033, slide=0.0014454397605732083)
+Training the Model...
+epoch     train_loss  valid_loss  error_rate  accuracy  time
+0         0.319466    0.125656    0.040504    0.959496  01:28
+Better model found at epoch 0 with valid_loss value: 0.12565582990646362.
+1         0.247616    0.090624    0.034203    0.965797  01:29
+Better model found at epoch 1 with valid_loss value: 0.09062422811985016.
+2         0.201797    0.092758    0.030603    0.969397  01:29
+3         0.163881    0.100454    0.034203    0.965797  01:29
+4         0.152107    0.092587    0.033303    0.966697  01:29
+No improvement since epoch 1: early stopping
+Model validation: [0.09062422811985016, 0.0342034213244915, 0.9657965898513794]
+Saving model as: fastai_model.pkl...
+Training completed!
 ```
 
 ## Start the server
