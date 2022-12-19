@@ -10,7 +10,7 @@ TEST_DF = pd.read_csv(TEST_FILE)
 IMG_DIR = DATA_DIR / "images"
 TEST_DF["image"] = TEST_DF["Id"].map(lambda x: f"{IMG_DIR}/{x:0>4}.jpg")
 MODEL_FILE = "fastai_model.pkl"
-OUTPUT_FILE = "fastai-submission.csv"
+OUTPUT_FILE = "submission.csv"
 
 
 def process_images(df, model):
@@ -26,7 +26,7 @@ def generate_submission(tta, dls):
     vocab = np.array(dls.vocab)
     sub = pd.read_csv(TEST_FILE)
     sub["label"] = vocab[idxs]
-    sub.to_csv("fastai-submission.csv", index=False)
+    sub.to_csv(OUTPUT_FILE, index=False)
     return sub
 
 
