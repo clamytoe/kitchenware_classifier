@@ -11,8 +11,11 @@ kw_router = APIRouter()
 async def classify_image(request: Request, image: UploadFile = File(...)):
     # Read the image data and classify it using the fastai model
     img_bytes = await image.read()
-    img = model.predict(img_bytes)
+    pred = model.predict(img_bytes)
 
     # Return the classification results
-    # return {"class": img[0], "confidence": img[1]}
-    return {"class": img[0]}
+    classes = model.dls.vocab
+    probs = map(float, pred[2])
+    results = {"predicted": pred[0], "probabilities": dict(zip(classes, probs))}
+
+    return results

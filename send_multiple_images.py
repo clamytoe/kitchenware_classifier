@@ -16,7 +16,8 @@ for idx, path_img in enumerate(paths):
         name_img = os.path.basename(path_img)
         file = {"image": (name_img, img, "multipart/form-data", {"Expires": "0"})}
         with requests.Session() as s:
-            r = s.post(url["cloud"], files=file).json()
+            r = s.post(url["local"], files=file).json()
             results.append({"image": paths[idx], **r})
 
-print(results)
+for result in results:
+    print(result)
