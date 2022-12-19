@@ -1,10 +1,12 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from uvicorn import run
 
 from kw_router import kw_router
 
 app = FastAPI()
 app.include_router(kw_router)
+favicon_path = "favicon.ico"
 
 
 @app.get("/")
@@ -22,6 +24,11 @@ def welcome() -> dict:
     }
 
     return response
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return FileResponse(favicon_path)
 
 
 if __name__ == "__main__":
