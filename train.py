@@ -23,6 +23,7 @@ from torch import device
 
 # Model to use
 MODEL = "convnext_nano"
+MODEL_FILE = "fastai_model.pkl"
 
 # Load data and set variables
 SEED = 42
@@ -34,6 +35,8 @@ IMG_DIR = DATA_DIR / "images"
 
 TRAIN_DF = pd.read_csv(DATA_DIR / "train.csv")
 TEST_DF = pd.read_csv(DATA_DIR / "test.csv")
+EXTRA_DF = pd.read_csv(DATA_DIR / "extra.csv")
+TRAIN_DF = pd.concat([TRAIN_DF, EXTRA_DF], ignore_index=True)
 TRAIN_DF["image"] = TRAIN_DF["Id"].map(lambda x: f"{x:0>4}.jpg")
 TEST_DF["image"] = TEST_DF["Id"].map(lambda x: f"{IMG_DIR}/{x:0>4}.jpg")
 
@@ -54,8 +57,8 @@ dls = ImageDataLoaders.from_df(
     path=str(IMG_DIR),
     valid_pct=0.2,
     seed=42,
-    bs=16,
-    val_bs=16,
+    bs=8,
+    val_bs=8,
     fn_col="image",  # type: ignore
     shuffle=True,
     label_col="label",  # type: ignore
@@ -97,7 +100,8 @@ learn.path = keep_path  # type: ignore
 print("Model validation:", learn.validate())
 
 # Save the model
-print("Saving model as: fastai_model.pkl...")
-learn.export("fastai_model.pkl")
+print(f"Saving model as: {MODEL_FILE}...")
+learn.export(MODEL_FILE)
 
 print("Training completed!")
+print(learn.summary())
