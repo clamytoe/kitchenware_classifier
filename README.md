@@ -180,7 +180,7 @@ With the server running, you can run either of the scripts to test out the serve
 [{'image': 'sample2.jpg', 'class': 'plate'}, {'image': 'sample.jpg', 'class': 'fork'}]
 ```
 
-> **NOTE:** The scripts can be changed so that the images are sent to my cloud service.
+> **NOTE:** By default the scripts submit the images to my cloud service. To test locally, just change the url setting from `url["cloud"]` to `url["local"]`.
 
 ## A much easier way
 
