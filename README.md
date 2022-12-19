@@ -242,7 +242,7 @@ Once you have the image you can run it as so:
 
 > **NOTE:** The image is 3.77GB but expands to 6.06GB.
 
-### Build your own
+## Build your own
 
 If you would rather build the docker image yourself, I have included the `Dockerfile` just for that purpose.
 Just run the following command from the directory where you cloned this repo to:
@@ -276,7 +276,7 @@ Here is what the dashboard looks like after classifying an image.
 Before I could even think about getting my model on the cloud, I first had to tag my image and push it to docker hub.
 
 ```zsh
-(kwc) ➜ docker tag kitchenware-clf clamytor/kitchenware-clf:latest
+(kwc) ➜ docker tag kitchenware-clf clamytoe/kitchenware-clf:latest
 ```
 
 > **NOTE:** Make sure to use your own docker hub user name.
