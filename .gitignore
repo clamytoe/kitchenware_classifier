@@ -115,8 +115,14 @@ kitchenware_classifier/data/
 # project archive
 *.zip
 
+# backup model folder
+models/
+
 # project notebooks
 notebooks/
 
 # project predictions
-predictions/fastai-convnext*.csv
+predictions/
+
+# model files
+*.pkl
