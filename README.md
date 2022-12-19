@@ -35,6 +35,8 @@ The dataset is pretty big so I did not include it here. You can download it from
 
 In order to get things to work right the first time, extract it's contents into the `kitchenware_classifier/data/` folder.
 
+> **NOTE:** I've added the [extra images](https://www.kaggle.com/datasets/agrigorev/kitchenware-extra-images) that were given to the community by Walukagga Patrick.
+
 My tree structure looks like this:
 
 ```zsh
@@ -50,25 +52,31 @@ My tree structure looks like this:
 ├── fastai_model.pkl
 ├── favicon.ico
 ├── images
-│   ├── coffe.jpg
-│   ├── docs.png
-│   ├── post.png
-│   ├── result.png
-│   ├── selected.png
-│   └── upload.png
+│   ├── coffe.jpg
+│   ├── deployment.png
+│   ├── docs.png
+│   ├── mogenius-welcome.png
+│   ├── mogenius.png
+│   ├── post.png
+│   ├── result.png
+│   ├── selected.png
+│   ├── settings.png
+│   └── upload.png
 ├── kitchenware_classifier
-│   ├── data
-│   │   ├── images
-│   │   ├── sample_submission.csv
-│   │   ├── test.csv
-│   │   └── train.csv
-│   └── kitchenware-classification.zip
+│   ├── data
+│   │   ├── extra.csv
+│   │   ├── images
+│   │   ├── sample_submission.csv
+│   │   ├── test.csv
+│   │   └── train.csv
+│   ├── extra-images.zip
+│   └── kitchenware-classification.zip
 ├── kw_router.py
-├── predictions
-│   └── fastai-submission.csv
+├── process_data.py
 ├── requirements.txt
 ├── sample.jpg
 ├── sample2.jpg
+├── setup.py
 ├── test_model.py
 ├── test_multiple_images.py
 ├── test_single_image.py
