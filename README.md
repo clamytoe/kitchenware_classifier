@@ -170,14 +170,15 @@ With the server running, you can run either of the scripts to test out the serve
 
 ```zsh
 (kwc) ➜ python send_single_image.py
-{'class': 'fork'}
+{'predicted': 'fork', 'probabilities': {'cup': 2.682557351363357e-05, 'fork': 0.9998975992202759, 'glass': 2.706188070078497e-06, 'knife': 5.796951882075518e-06, 'plate': 6.11106152064167e-05, 'spoon': 5.840373432874912e-06}}
 ```
 
 *send_multiple_images.py:*
 
 ```zsh
-(kwc) ➜ python send_multiple_images.py
-[{'image': 'sample2.jpg', 'class': 'plate'}, {'image': 'sample.jpg', 'class': 'fork'}]
+(kwc) ➜ python python send_multiple_images.py
+{'image': 'sample2.jpg', 'predicted': 'plate', 'probabilities': {'cup': 0.00012867810437455773, 'fork': 5.518031230167253e-06, 'glass': 1.5953222828102298e-05, 'knife': 1.3917076557845576e-07, 'plate': 0.9998399019241333, 'spoon': 9.731486898090225e-06}}
+{'image': 'sample.jpg', 'predicted': 'fork', 'probabilities': {'cup': 2.682557351363357e-05, 'fork': 0.9998975992202759, 'glass': 2.706188070078497e-06, 'knife': 5.796951882075518e-06, 'plate': 6.11106152064167e-05, 'spoon': 5.840373432874912e-06}}
 ```
 
 > **NOTE:** By default the scripts submit the images to my cloud service. To test locally, just change the url setting from `url["cloud"]` to `url["local"]`.
