@@ -47,8 +47,6 @@ My tree structure looks like this:
 ├── README.md
 ├── api.py
 ├── environment.yml
-├── evaluate_model.py
-├── fastai-classifier.ipynb
 ├── fastai_model.pkl
 ├── favicon.ico
 ├── images
@@ -66,20 +64,22 @@ My tree structure looks like this:
 │   ├── data
 │   │   ├── extra.csv
 │   │   ├── images
+│   │   ├── models
 │   │   ├── sample_submission.csv
 │   │   ├── test.csv
 │   │   └── train.csv
 │   ├── extra-images.zip
 │   └── kitchenware-classification.zip
 ├── kw_router.py
-├── process_data.py
+├── notebook.ipynb
+├── predict.py
 ├── requirements.txt
 ├── sample.jpg
 ├── sample2.jpg
-├── setup.py
+├── send_multiple_images.py
+├── send_single_image.py
+├── submission.csv
 ├── test_model.py
-├── test_multiple_images.py
-├── test_single_image.py
 └── train.py
 ```
 
@@ -161,26 +161,26 @@ and
 
 I have provided two sample scripts:
 
-* `test_simgle_image.py`
-* `test_multiple_images.py`
+* `send_simgle_image.py`
+* `send_multiple_images.py`
 
 With the server running, you can run either of the scripts to test out the server.
 
-*test_simgle_image.py:*
+*send_simgle_image.py:*
 
 ```zsh
-(kwc) ➜ python test_single_image.py
+(kwc) ➜ python send_single_image.py
 {'class': 'fork'}
 ```
 
-*test_multiple_images.py:*
+*send_multiple_images.py:*
 
 ```zsh
-(kwc) ➜ python test_multiple_images.py
+(kwc) ➜ python send_multiple_images.py
 [{'image': 'sample2.jpg', 'class': 'plate'}, {'image': 'sample.jpg', 'class': 'fork'}]
 ```
 
-Now you can modify the scripts and use them for your own purpose.
+> **NOTE:** The scripts can be changed so that the images are sent to my cloud service.
 
 ## A much easier way
 
@@ -195,8 +195,8 @@ This entrypoint just returns some information about me and the project.
 
 ### POST /classify_image Classify Image
 
-This is where you get to play with the model and see how well it works.
-Feed it an image of kitchenware item and see how well it does.
+This is where you get to play with the model and see how well/bad it works.
+Feed it an image of a kitchenware item and see how it does.
 
 To use it, simply click on the **POST** button to expand it:
 
@@ -239,7 +239,7 @@ Once you have the image you can run it as so:
 (kwc) ➜ docker run -it --rm -p 8000:8000 clamytoe/kitchenware-clf
 ```
 
-> **NOTE:** The image is just a little over 6GB.
+> **NOTE:** The image is 3.77GB but expands to 6.06GB.
 
 ### Build your own
 
