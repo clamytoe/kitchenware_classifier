@@ -5,7 +5,10 @@ import requests
 
 # returns a list of file paths
 paths = glob("sample*.jpg", recursive=True)
-url = "http://127.0.0.1:8000/classify_image"
+url = {
+    "local": "http://127.0.0.1:8000/classify_image",
+    "cloud": "https://kitchenware-cl-prod-kitchenware-classifier-7f8cze.mo1.mogenius.io/classify_image",
+}
 
 results = []
 for idx, path_img in enumerate(paths):
@@ -13,7 +16,7 @@ for idx, path_img in enumerate(paths):
         name_img = os.path.basename(path_img)
         file = {"image": (name_img, img, "multipart/form-data", {"Expires": "0"})}
         with requests.Session() as s:
-            r = s.post(url, files=file).json()
+            r = s.post(url["cloud"], files=file).json()
             results.append({"image": paths[idx], **r})
 
 print(results)
