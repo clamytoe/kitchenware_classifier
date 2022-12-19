@@ -250,9 +250,11 @@ Once you have the image you can run it as so:
 
 ## Cloud deployment
 
-I've been really impressed with the ease of use of [Mogenius.io](https://mogenius.com/) so I went ahead and deployed the model there.
+I've been really impressed with the ease of use of [Mogenius](https://mogenius.com/) so I went ahead and deployed the model there.
 
-[Kitchenware Classifier on Mogenius.io](kitchenware-cl-prod-kitchenware-classifier-7f8cze.mo1.mogenius.io:80/docs)
+![mogenius-welcome](images/mogenius-welcome.png)
+
+Give it a try: [Kitchenware Classifier on Mogenius](https://kitchenware-cl-prod-kitchenware-classifier-7f8cze.mo1.mogenius.io/docs)
 
 Here is what the dashboard looks like after classifying an image.
 
@@ -262,7 +264,7 @@ Here is what the dashboard looks like after classifying an image.
 
 ### Prepare model for cloud deployment
 
-Before I could even think about getting my model on the cloud, I first have to tag my image and push it to docker hub.
+Before I could even think about getting my model on the cloud, I first had to tag my image and push it to docker hub.
 
 ```zsh
 (kwc) ➜ docker tag kitchenware-clf clamytor/kitchenware-clf:latest
@@ -270,31 +272,25 @@ Before I could even think about getting my model on the cloud, I first have to t
 
 > **NOTE:** Make sure to use your own docker hub user name.
 
-Once your image has been properly named, you can now push it.
+Once the image has been properly named, it can now be push.
 
 ```zsh
 (kwc) ➜ docker push clamytoe/kitchenware-clf:latest
 ```
 
-Mogenius allows you to deploy from an existing image but it can also just build it from yoru GitHub repo, as long as you have a `Dockerfile`.
-Detailing the steps here is beyond the scope of this project, but it's really simple. Simply head over to Mogenius and check out their [Quickstart Guide](https://docs.mogenius.com/getting-started/quickstart).
+> Mogenius allows you to deploy from an existing image but it can also just build it from yoru GitHub repo, as long as you have a `Dockerfile`.
 
-*Deplyment from docker hub image in progress...*
+Once the image has been uploaded to Docker Hub, it was relatively easy to set it up.
+
+![settings](images/settings.png)
+
+> **NOTE:** Just remember to expose the correct port.
+
+*Deployment from docker hub image in progress...*
 
 ![deployment](images/deployment.png)
 
-## Contributing
-
-Contributions are welcomed.
-Tests can be run with with `pytest -v`, please ensure that all tests are passing and that you've checked your code with the following packages before submitting a pull request:
-
-* black
-* flake8
-* isort
-* mypy
-* pytest-cov
-
-I am not adhering to them strictly, but try to clean up what's reasonable.
+More detailed instructions can be found in their [Quickstart Guide](https://docs.mogenius.com/getting-started/quickstart).
 
 ## License
 
@@ -303,10 +299,6 @@ Distributed under the terms of the [MIT](https://opensource.org/licenses/MIT) li
 ## Issues
 
 If you encounter any problems, please [file an issue](https://github.com/clamytoe/toepack/issues) along with a detailed description.
-
-## Changelog
-
-* **v0.1.0** Initial commit.
 
 [python-version]:https://img.shields.io/badge/python-3.10.6-brightgreen.svg
 [latest-version]:https://img.shields.io/badge/version-1.0.0-blue.svg
