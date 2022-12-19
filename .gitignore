@@ -123,6 +123,7 @@ notebooks/
 
 # project predictions
 predictions/
+submission.csv
 
 # model files
 *.pkl
