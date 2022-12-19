@@ -21,6 +21,9 @@ from fastai.vision.all import (
 )
 from torch import device
 
+# Model to use
+MODEL = "convnext_nano"
+
 # Load data and set variables
 SEED = 42
 set_seed(42)
@@ -65,7 +68,7 @@ dls = ImageDataLoaders.from_df(
 # Build learner
 learn = vision_learner(
     dls,
-    "convnext_nano",
+    MODEL,
     metrics=[error_rate, accuracy],
     path=".",
 )
