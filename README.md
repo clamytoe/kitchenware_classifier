@@ -210,7 +210,7 @@ This will reveal a **Choose File** button that will allow you to navigate your f
 
 Here, I've randomly chosen a tricky one from the [Internet](https://static.turbosquid.com/Preview/2014/07/07__23_41_37/coffe_cup_preview_02.jpgc89daf5f-e0b8-46f7-929d-8c618f1b09fcLarge.jpg) to see what the model picks up:
 
-<img src="images/coffe.jpg" alt="coffe" width="200" />
+<img src="images/coffee.jpg" alt="coffee" width="200" />
 
 With the image loaded:
 
