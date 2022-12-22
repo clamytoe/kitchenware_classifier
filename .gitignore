@@ -116,6 +116,7 @@ kitchenware_classifier/data/
 *.zip
 
 # backup model folder
+mlruns/
 models/
 
 # project notebooks
