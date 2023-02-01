@@ -46,7 +46,6 @@ My tree structure looks like this:
 ├── Pipfile.lock
 ├── README.md
 ├── api.py
-├── environment.yml
 ├── fastai_model.pkl
 ├── favicon.ico
 ├── images
@@ -100,7 +99,7 @@ Once there clone this repo.
 If you are an Anaconda user, this command will get you up to speed with the base installation.
 
 ```zsh
-(py310) ➜ conda env create
+(py310) ➜ conda create --name kws -file requirements.txt
 (py310) ➜ conda activate kwc
 ```
 
